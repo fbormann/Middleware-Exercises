@@ -15,18 +15,16 @@ public class Main {
         }
 
         for (int i = 0; i < 5; i++) {
-            philophers.add(new Philosopher(i));
+            philophers.add(new Philosopher(i, forks));
         }
 
+        for (int i = 0; i < philophers.size(); i++) {
+            philophers.get(i).start();
+        }
+
+        int x = 0;
         while(true) {
-
-            for (int i = 0; i < philophers.size(); i++) {
-                if (philophers.get(i).tryToEat(forks)) {
-
-                } else {
-                    requesters.add(i);
-                }
-            }
+            x += 1;
         }
     }
 }
