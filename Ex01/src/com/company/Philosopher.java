@@ -32,18 +32,26 @@ public class Philosopher extends Thread {
             if (forks[tablePosition] == 0) {
               this.forks[tablePosition] = 1;
               this.action = PhilosopherAction.TRYING_TO_EAT;
+              System.out.println("The philosopher in position " +
+                      this.tablePosition + " is trying to eat");
             }
             if (forks[neighborPosition] == 0) {
               this.forks[neighborPosition] = 1;
               this.action = PhilosopherAction.TRYING_TO_EAT;
+              System.out.println("The philosopher in position " +
+                      this.tablePosition + " is trying to eat");
             }
           } else if (this.action.equals(PhilosopherAction.TRYING_TO_EAT)) {
             if (forks[tablePosition] == 0) {
               this.forks[tablePosition] = 1;
               this.action = PhilosopherAction.EATING;
+              System.out.println("The philosopher in position " +
+                      this.tablePosition + " is eating");
             } else if (forks[neighborPosition] == 0) {
               this.forks[neighborPosition] = 1;
               this.action = PhilosopherAction.EATING;
+              System.out.println("The philosopher in position " +
+                      this.tablePosition + " is eating");
             }
           }
           if (this.action.equals(PhilosopherAction.EATING) ||
