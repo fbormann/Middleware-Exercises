@@ -12,8 +12,7 @@ public class SmartPhilosopher extends Thread {
 
     public enum PhilosopherAction {
         THINKING,
-        EATING,
-        TRYING_TO_EAT
+        EATING
     }
 
     public SmartPhilosopher(int tablePosition, int[] forks, ArrayList<ReentrantLock> locks) {
