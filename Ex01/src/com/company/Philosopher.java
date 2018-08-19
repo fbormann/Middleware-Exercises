@@ -1,13 +1,13 @@
 package com.company;
 
-import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantLock;
 
 public class Philosopher extends Thread {
   private int tablePosition;
   private int neighborPosition;
-  private Lock[] forks;
+  private ReentrantLock[] forks;
 
-  public Philosopher(int tablePosition, Lock[] forks) {
+  public Philosopher(int tablePosition, ReentrantLock[] forks) {
     this.tablePosition = tablePosition;
     this.neighborPosition = (tablePosition + 1) % forks.length;
     this.forks = forks;
