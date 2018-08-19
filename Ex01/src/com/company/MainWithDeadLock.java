@@ -1,10 +1,8 @@
 package com.company;
 
-import javafx.scene.paint.PhongMaterial;
-
 import java.util.ArrayList;
 
-public class Main {
+public class MainWithDeadLock {
 
     public static void main(String[] args) {
         ArrayList<Philosopher> philophers = new ArrayList<Philosopher>();
